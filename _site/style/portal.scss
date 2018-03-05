@@ -653,211 +653,6 @@ main {
             }
         }
     }
-
-    .box {
-        display: block;
-        position: relative;
-        background: white;
-        margin-bottom: $padding-xl;
-        border: 1px solid $borderColor;
-        @include border-radius(4px);
-        @include transition(all .2s linear);
-        @include box-shadow($boxShadowAlt);
-
-        &:hover {
-            @include transition(all .2s linear);
-            @include box-shadow($boxShadow);
-        }
-
-        .box-header {
-            padding: $padding;
-            border-bottom: 1px solid $borderColor;
-
-            h2 {
-                font-size: $fontSize;
-                font-weight: $fontSize;
-                margin: 0;
-            }
-
-            h3 {
-                font-size: $fontSizeSmall;
-                margin: 0;
-                color: $textColorLight;
-            }
-
-            .box-header-right {
-                float: right;
-
-                ul {
-                    list-style-type: none;
-                    margin: 0;
-                    padding: 0;
-
-                    li {
-                        display: inline-block;
-                    }
-                }
-            }
-        }
-
-        .box-content {
-            padding: $padding;
-            overflow-x: auto;
-        }
-
-        .box-list-content {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-    }
-
-    .box-title {
-        display: block;
-        position: relative;
-        background: white;
-        padding: $padding;
-        margin-bottom: $padding-xl;
-        border: 1px solid $borderColor;
-        line-height: $inputSizeSm;
-        @include border-radius(4px);
-        @include transition(all .2s linear);
-        @include box-shadow($boxShadowAlt2);
-
-        h2 {
-            font-size: $fontSizeMedium;
-            font-weight: $fontBold;
-            margin: 0;
-            line-height: $inputSizeSm;
-        }
-
-        h3 {
-            font-size: $fontSizeSmall;
-            margin: 0;
-            color: $textColorLight;
-        }
-
-        .box-header-right {
-            float: right;
-
-            ul {
-                list-style-type: none;
-                margin: 0;
-                padding: 0;
-
-                li {
-                    display: inline-block;
-                }
-            }
-
-            .button {
-                margin-top: -$padding-xs;
-                font-size: $fontSizeSmall;
-            }
-        }
-    }
-
-    .box-list {
-        text-align: right;
-
-        .box {
-            padding: $padding;
-            text-align: left;
-            @include transition(all .25s ease);
-
-            h2 {
-                font-weight: $fontNormal;
-                font-size: $fontSizeMedium;
-                color: $textColorDark;
-                margin: 0;
-                @include transition(all .25s ease);
-            }
-
-            h6 {
-                margin: 0;
-                font-size: $fontSizeSmall;
-            }
-
-            .change {
-                right: $padding;
-                font-size: $fontSizeLarge;
-                font-weight: $fontLight;
-                @include vertical-align(absolute);
-
-                small {
-                    color: $textColor;
-                    font-size: $fontSize;
-                    letter-spacing: 0.05em;
-                }
-            }
-
-            &:hover {
-                h2 {
-                    //color: $primaryColor;
-                    @include transition(all .25s ease);
-                }
-            }
-        }
-
-        &.library-list {
-
-            .box {
-                padding: 0 0 $padding;
-                overflow: hidden;
-                background: $tealAlert;
-                color: white;
-                border: none;
-                @include transition(all 200ms ease-in);
-
-                &.box-workout {
-                    background: white;
-                    color: $textColor;
-
-                    .icon {
-                        position: relative;
-                        display: block;
-                        margin-bottom: $padding;
-                        padding: 0;
-                        background: white;
-                        z-index: 1;
-                        height: 200px;
-                        overflow: hidden;
-
-                        img {
-                            width: 100%;
-                            height: auto;
-                            max-height: none;
-                        }
-                    }
-                }
-
-                .icon {
-                    position: relative;
-                    display: block;
-                    margin-bottom: $padding-lg;
-                    padding: $padding-xl $padding;
-                    background: white;
-                    z-index: 1;
-
-                    img {
-                        max-height: 80px;
-                    }
-                }
-
-                h2, h6 {
-                    display: block;
-                    text-align: center;
-                    padding: 0 $padding;
-                    color: inherit;
-                }
-
-                &:hover {
-                    @include transform(translate(0, -3px));
-                    @include transition(all 200ms ease-in);
-                }
-            }
-        }
-    }
 }
 
 // Header
@@ -1156,7 +951,7 @@ main {
 				float: right;
 
                 &.liked {
-                    color: red;
+                    color: $blueAlert;
                 }
 			}
 		}
@@ -1204,6 +999,31 @@ main {
 	@media (max-width: 992px) {
 		padding-top: $padding-xl;
 	}
+
+    .like-button {
+        display: block;
+        position: fixed;
+        width: $inputSizeLg;
+        height: $inputSizeLg;
+        line-height: $inputSizeLg - 1px;
+        background: white;
+        color: $blueAlert;
+        text-align: center;
+        right: $padding-xl;
+        top:  4*$padding-xl;
+        font-size: 22px;
+        @include border-radius(.5*$inputSizeLg);
+        @include transform(scale(.85));
+        @include box-shadow($boxShadowHover);
+        @include transition(all .1s linear);
+
+        &:hover {
+            background: $blueAlert;
+            color: white;
+            @include transform(scale(1));
+            @include transition(all .1s linear);
+        }
+    }
 
     .blog-title, .blog-meta {
         text-align: center;
