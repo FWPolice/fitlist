@@ -1,0 +1,53 @@
+{% assign current = page.url | downcase | split: '/' %}
+
+<nav id="mainNav">
+    <div class="logo">
+        <a href="#" class="logo animsition-link">
+            <img src="{{ site.baseurl }}/images/logo.svg" alt="TF" />
+        </a>
+    </div>
+    <ul>
+        <li class="{% if current[1] == 'index' %}active{% endif %}"><a href="{{ site.baseurl }}/"><i class="far fa-th-large"></i></a></li>
+        <li class="{% if current[1] == 'trainers' %}active{% endif %}"><a href="{{ site.baseurl }}/trainers"><i class="far fa-user-alt"></i></a></li>
+        <li class="{% if current[1] == 'blog' %}active{% endif %}"><a href="{{ site.baseurl }}/blog"><i class="far fa-comments"></i></a></li>
+    </ul>
+    <div class="share-link">
+        <a><i class="far fa-share-alt"></i></a>
+    </div>
+</nav>
+
+<nav id="mobileNav">
+    <ul>
+        <li class="{% if current[1] == 'overview' %}active{% endif %}">
+            <a href="{{ site.baseurl }}/overview">
+                <i class="far fa-home"></i> Home
+            </a>
+        </li>
+        <li class="{% if current[1] == 'clients' %}active{% endif %}">
+            <a href="{{ site.baseurl }}/clients">
+                <i class="far fa-users"></i> Clients
+            </a>
+        </li>
+        <li class="{% if current[1] == 'routines' %}active{% endif %}">
+            <a href="{{ site.baseurl }}/calendar">
+                <i class="far fa-calendar"></i> Calendar
+            </a>
+        </li>
+        <li class="{% if current[1] == 'library' %}active{% endif %}">
+            <a href="{{ site.baseurl }}/library">
+                <i class="far fa-video"></i> Library
+            </a>
+        </li>
+        <li class="btn-group dropup">
+            <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <i class="far fa-ellipsis-v"></i> More
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right">
+                <li class="{% if current[1] == 'account/profile' %}active{% endif %}"><a href="/account/profile" class="animsition-link dropdown-item"><i class="far fa-user"></i> Profile</a></li>
+                <li class="{% if current[1] == 'account/billing' %}active{% endif %}"><a href="/account/billing" class="animsition-link dropdown-item"><i class="far fa-dollar-sign"></i> Billing</a></li>
+                <li class="{% if current[1] == 'account/settings' %}active{% endif %}"><a href="/account/profile/edit" class="animsition-link dropdown-item"><i class="far fa-cog"></i> Settings</a></li>
+                <li class="{% if current[1] == 'login' %}active{% endif %}"><a href="/" class="animsition-link dropdown-item"><i class="far fa-sign-out"></i> Sign Out</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>

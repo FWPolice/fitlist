@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 480 480" style="enable-background:new 0 0 480 480;" xml:space="preserve">
+<rect x="136" y="360" style="fill:#FAC05E;" width="208" height="32"/>
+<g>
+	<rect x="344" y="280" style="fill:#50D4E3;" width="48" height="192"/>
+	<rect x="392" y="312" style="fill:#50D4E3;" width="48" height="128"/>
+	<rect x="88" y="280" style="fill:#50D4E3;" width="48" height="192"/>
+	<rect x="40" y="312" style="fill:#50D4E3;" width="48" height="128"/>
+</g>
+<g>
+	<rect x="440" y="360" style="fill:#FAC05E;" width="32" height="32"/>
+	<rect x="8" y="360" style="fill:#FAC05E;" width="32" height="32"/>
+</g>
+<g>
+	<rect x="104" y="8" style="fill:#EE6352;" width="96" height="48"/>
+	<rect x="104" y="136" style="fill:#EE6352;" width="96" height="48"/>
+</g>
+<rect x="136" y="56" style="fill:#FAC05E;" width="32" height="80"/>
+<g>
+	<rect x="240" y="8" style="fill:#EE6352;" width="96" height="56"/>
+	<rect x="240" y="144" style="fill:#EE6352;" width="96" height="56"/>
+</g>
+<rect x="272" y="64" style="fill:#FAC05E;" width="32" height="80"/>
+<g>
+	<rect x="376" y="8" style="fill:#EE6352;" width="96" height="80"/>
+	<rect x="376" y="168" style="fill:#EE6352;" width="96" height="80"/>
+</g>
+<rect x="408" y="88" style="fill:#FAC05E;" width="32" height="80"/>
+<g>
+	<rect x="8" y="8" style="fill:#EE6352;" width="64" height="48"/>
+	<rect x="8" y="136" style="fill:#EE6352;" width="64" height="48"/>
+</g>
+<rect x="24" y="56" style="fill:#FAC05E;" width="32" height="80"/>
+<g>
+	<path style="fill:#0F272A;" d="M472,352h-24v-40c0-4.416-3.576-8-8-8h-40v-24c0-4.416-3.576-8-8-8h-48c-4.424,0-8,3.584-8,8v72H144
+		v-72c0-4.416-3.576-8-8-8H88c-4.424,0-8,3.584-8,8v24H40c-4.424,0-8,3.584-8,8v40H8c-4.424,0-8,3.584-8,8v32c0,4.416,3.576,8,8,8
+		h24v40c0,4.416,3.576,8,8,8h40v24c0,4.416,3.576,8,8,8h48c4.424,0,8-3.584,8-8v-72h192v72c0,4.416,3.576,8,8,8h48
+		c4.424,0,8-3.584,8-8v-24h40c4.424,0,8-3.584,8-8v-40h24c4.424,0,8-3.584,8-8v-32C480,355.584,476.424,352,472,352z M16,384v-16h16
+		v16H16z M48,432v-40v-32v-40h32v112H48z M128,464H96v-24V312v-24h32v72v32V464z M144,384v-16h192v16H144z M384,464h-32v-72v-32v-72
+		h32v24v128V464z M432,432h-32V320h32v40v32V432z M464,384h-16v-16h16V384z"/>
+	<path style="fill:#0F272A;" d="M104,192h96c4.424,0,8-3.584,8-8v-48c0-4.416-3.576-8-8-8h-24V64h24c4.424,0,8-3.584,8-8V8
+		c0-4.416-3.576-8-8-8h-96c-4.424,0-8,3.584-8,8v48c0,4.416,3.576,8,8,8h24v64h-24c-4.424,0-8,3.584-8,8v48
+		C96,188.416,99.576,192,104,192z M112,16h80v32h-24h-32h-24V16z M144,64h16v64h-16V64z M112,144h24h32h24v32h-80V144z"/>
+	<path style="fill:#0F272A;" d="M240,208h96c4.424,0,8-3.584,8-8v-56c0-4.416-3.576-8-8-8h-24V72h24c4.424,0,8-3.584,8-8V8
+		c0-4.416-3.576-8-8-8h-96c-4.424,0-8,3.584-8,8v56c0,4.416,3.576,8,8,8h24v64h-24c-4.424,0-8,3.584-8,8v56
+		C232,204.416,235.576,208,240,208z M248,16h80v40h-24h-32h-24V16z M280,72h16v64h-16V72z M248,152h24h32h24v40h-80V152z"/>
+	<path style="fill:#0F272A;" d="M472,0h-96c-4.424,0-8,3.584-8,8v80c0,4.416,3.576,8,8,8h24v64h-24c-4.424,0-8,3.584-8,8v80
+		c0,4.416,3.576,8,8,8h96c4.424,0,8-3.584,8-8v-80c0-4.416-3.576-8-8-8h-24V96h24c4.424,0,8-3.584,8-8V8C480,3.584,476.424,0,472,0z
+		 M464,16v24h-80V16H464z M384,240v-24h80v24H384z M464,200h-80v-24h24h32h24V200z M432,160h-16V96h16V160z M440,80h-32h-24V56h80
+		v24H440z"/>
+	<path style="fill:#0F272A;" d="M8,192h64c4.424,0,8-3.584,8-8v-48c0-4.416-3.576-8-8-8h-8V64h8c4.424,0,8-3.584,8-8V8
+		c0-4.416-3.576-8-8-8H8C3.576,0,0,3.584,0,8v48c0,4.416,3.576,8,8,8h8v64H8c-4.424,0-8,3.584-8,8v48C0,188.416,3.576,192,8,192z
+		 M16,16h48v32h-8H24h-8V16z M32,64h16v64H32V64z M16,144h8h32h8v32H16V144z"/>
+	<rect x="24" y="224" style="fill:#0F272A;" width="16" height="16"/>
+	<rect x="56" y="224" style="fill:#0F272A;" width="16" height="16"/>
+	<rect x="88" y="224" style="fill:#0F272A;" width="16" height="16"/>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+<g>
+</g>
+</svg>
