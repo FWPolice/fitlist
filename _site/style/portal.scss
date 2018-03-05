@@ -908,6 +908,28 @@ main {
     }
 }
 
+// Pagination
+.pagination {
+    display: inline-block;
+    margin: $padding-xl 0;
+    padding: 0;
+
+    li {
+        display: inline-block;
+
+        a {
+            color: $textColor;
+            @include box-shadow($boxShadow);
+
+            &:hover {
+                background: $primaryColor;
+                color: white;
+                @include box-shadow($boxShadowHover);
+            }
+        }
+    }
+}
+
 // Blog Post
 .post-card {
 	display: block;
