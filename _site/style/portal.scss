@@ -14,11 +14,7 @@
 @import "classhelper";
 
 // Font-Awesome
-@import "library/fontawesome/fontawesome";
-@import "library/fontawesome/fa-brands";
-@import "library/fontawesome/fa-light";
-@import "library/fontawesome/fa-regular";
-@import "library/fontawesome/fa-solid";
+@import "library/fontawesome/fontawesome-all.min.css";
 
 // Library
 @import "library/animate.css";
@@ -29,10 +25,6 @@ body {
   background: $bodyColor;
   letter-spacing: 0.0125em;
   padding-left: $navSize;
-}
-
-section {
-    padding: 0;
 }
 
 .loading {
@@ -433,7 +425,7 @@ nav {
 .sidebar {
     display: block;
     top: 0;
-    left: $inputSizexL;
+    left: $inputSizeXl;
     height: 100vh;
     padding: 0;
     overflow: hidden;
@@ -538,7 +530,7 @@ main {
         height: $inputSizeMd;
         padding: 0;
 
-        a {
+        a:not(.button) {
             display: inline-block;
             width: $inputSize;
             height: $inputSize;
@@ -871,7 +863,7 @@ main {
 // Header
 #homePage {
     padding: 0;
-    padding-top: $inputSizexL;
+    padding-top: $inputSizeXl;
 
     header {
         background: url('../images/hero/dotmap.png') no-repeat center bottom;
@@ -929,7 +921,6 @@ main {
 
     section {
         position: relative;
-        min-height: 400px;
         padding: 4*$padding-xl 0;
 
         .back-title {
@@ -941,15 +932,383 @@ main {
             font-size: 150px;
             font-family: 'Homemade Apple', cursive;
         }
+
+        .title {
+            width: 100%;
+            margin-bottom: 2*$padding-xl;
+
+            h5, h1 {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+
+            h5 {
+                font-size: $fontSizeMedium;
+                margin-bottom: $padding-xs;
+                text-transform: uppercase;
+                color: $textColor;
+                text-align: center;
+
+                &:after {
+                    display: block;
+                    margin: $padding-xl auto;
+                    content: "";
+                    width: 50px;
+                    height: 3px;
+                    background: $primaryColor;
+                }
+            }
+
+            h1 {
+                color: $textColorDark;
+                font-size: 1.75*$fontSizexLarge;
+                font-weight: $fontBold;
+                margin-bottom: 3*$padding-xl;
+                text-align: center;
+            }
+
+            .button {
+                font-size: $fontSizeLarge;
+                @include box-shadow(0 15px 25px 0 rgba(0,0,0,.2));
+            }
+
+            p {
+                font-size: $fontSizeMedium;
+                letter-spacing: 0.025em;
+                color: inherit;
+            }
+
+            &.white {
+                h5 {
+                    color: white;
+
+                    &:after {
+                        background: white;
+                    }
+                }
+            }
+        }
     }
 
     .features {
         background: $primaryColor;
         color: white;
+
+        .feature {
+            display: block;
+            margin: $padding 0;
+            background: white;
+            text-align: center;
+            padding: $padding-xl $padding-lg;
+            @include border-radius(10px);
+            @include transform(translate(0, -3px));
+            @include box-shadow($boxShadowHover);
+            @include transition(all .4s linear);
+
+            .icon {
+                position: relative;
+                display: block;
+                margin: 0 auto $padding-lg;
+                padding: 0;
+                line-height: $inputSizeXl;
+                height: $inputSizeXl;
+                width: $inputSizeXl;
+                text-align: center;
+                background: $primaryColor;
+                color: white;
+                font-size: 2*$fontSize;
+                cursor: default;
+                @include border-radius(0.5*$inputSizeXl);
+                @include box-shadow(0 18px 32px rgba(0,0,0,.28));
+                @include transition(all .2s linear);
+
+                i {
+                    display: inline-block;
+                    line-height: $inputSizeXl;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                &:before {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    width: 0;
+                    height: 0;
+                    background: white;
+                    z-index: 0;
+                    @include opacity(0);
+                    @include border-radius(50%);
+                    @include transition(all .2s linear);
+                }
+            }
+
+            h6 {
+                font-size: 1.5*$fontSize;
+                font-weight: $fontNormal;
+                margin-bottom: $padding-xs;
+                color: $textColorDark;
+            }
+
+            p {
+                max-width: 400px;
+                margin: 0 auto;
+                color: $textColorDark;
+            }
+        }
+    }
+
+    .home-statistics {
+        background: white;
+        padding: $padding-xl 0;
+        background: $primaryColor;
+        //@include box-shadow($boxShadow);
+
+        .col-md-4 {
+            margin: 2*$padding-lg 0;
+            padding-top: 0;
+            padding-bottom: 0;
+            @include box-shadow(1px 0 0 $borderColorLight);
+
+            &:last-child {
+                box-shadow: none;
+            }
+        }
+
+        .home-stat {
+            position: relative;
+            padding: 0 $padding;
+            text-shadow: 0 1px rgba(0,0,0,0.1);
+            margin-bottom: $padding-sm;
+            text-align: center;
+
+            .big {
+                font-size: 3*$fontSizexLarge;
+                display: inline-block;
+                font-weight: 300;
+                margin-right: 5px;
+                line-height: 1;
+                color: white;
+            }
+
+            .small {
+                font-size: $fontSizeMedium;
+                line-height: 1.2em;
+                display: inline-block;
+                text-align: left;
+                color: white;
+            }
+
+            @media only screen and (max-width: $grid-md - 1px) {
+                .big {
+                    font-size: 4*$fontSize;
+                }
+
+                .small {
+                    font-size: $fontSize;
+                }
+            }
+        }
     }
 }
 
-// Trainer Detail
+.post-card {
+	display: block;
+	background: white;
+	padding: 0;
+	margin: $padding-lg 0;
+	line-height: 1.47;
+	overflow: hidden;
+	@include border-radius(4px);
+	@include box-shadow($boxShadow);
+
+	.post-image {
+		height: 200px;
+		background-position: center center;
+		background-size: cover;
+		background-color: #D6E5F9;
+		z-index: 1;
+		position: relative;
+	}
+
+	.post-content {
+		padding: $padding-xl;
+		color: $textColor;
+
+		.post-category {
+			color: $textColorLight;
+			margin: 0 0 $padding-sm;
+
+			span {
+				color: inherit;
+				float: right;
+			}
+		}
+
+		.post-title {
+			display: -webkit-box;
+			font-size: 22px;
+			margin-bottom: $padding-sm;
+			line-height: 1.47;
+			font-weight: $fontBold;
+			height: 65px;
+			overflow: hidden;
+			-webkit-line-clamp: 2;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+			@include transition(all 200ms ease-in);
+		}
+
+		.post-description {
+			display: -webkit-box;
+			height: 60px;
+			overflow: hidden;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
+			text-overflow: ellipsis;
+		}
+	}
+
+	&:hover {
+		@include box-shadow($boxShadowHover);
+
+		.post-content {
+			.post-title {
+				color: $primaryColor;
+			}
+		}
+	}
+}
+
+.blog {
+    display: block;
+    position: relative;
+    background: $white;
+    height: 470px;
+    overflow: hidden;
+    margin: $padding 0;
+    @include box-shadow($boxShadow);
+    @include transition(all 0.3s ease);
+
+    .blog-img{
+        height: 300px;
+        overflow: hidden;
+
+        img {
+            height: 300px;
+            min-width: 100%;
+            @include transition(all 0.5s ease);
+        }
+
+        .date {
+            position: absolute;
+            top: $padding;
+            right: $padding;
+            z-index: 1;
+            background: $primaryColor;
+            width: $inputSizeMd;
+            height: $inputSizeMd;
+            color: $white;
+            text-align: center;
+            padding: .45*$padding 0;
+            line-height: 1.2;
+            @include border-radius(100%);
+            @include transition(all 0.3s ease);
+
+            .month {
+                font-weight: $fontBold;
+            }
+        }
+    }
+
+    .blog-content {
+        position: absolute;
+        bottom: 0;
+        background: $white;
+        width: 100%;
+        padding: $padding;
+
+        .category {
+            position: absolute;
+            top: -$inputSizeSm;
+            left: 0;
+            background: $primaryColor;
+            padding: 0 $padding;
+            line-height: $inputSizeSm;
+            color: white;
+            font-size: $fontSizeSmall;
+            text-transform: uppercase;
+        }
+
+        .article-title {
+            margin-bottom: .75*$padding;
+            font-size: $fontSizeLarge;
+            text-shadow: none;
+            font-weight: $fontBold;
+        }
+
+        .sub-title {
+            font-style: normal;
+            font-size: $fontSize;
+            padding-bottom: $padding;
+        }
+
+        .description {
+            height: 0;
+            overflow: hidden;
+            @include transition(all 0.3s ease);
+        }
+
+        .blog-meta {
+            display: block;
+            background: $white;
+            font-size: $fontSizeSmall;
+
+            .timestamp {
+                display: inline-block;
+                margin-right: $padding;
+            }
+
+            .comments a {
+                font-weight: $fontNormal;
+            }
+        }
+    }
+
+    &:hover, .hover {
+        @include box-shadow(0px 1px 35px 0px rgba(0, 0, 0, 0.3));
+        @include transition(all 0.3s ease);
+
+        .blog-img {
+            .date {
+                background: $white;
+                color: $primaryColor;
+                @include transition(all 0.3s ease);
+            }
+
+            img {
+                @include transform(scale(1.1));
+                @include opacity(60);
+                @include transition(all 0.5s ease);
+            }
+        }
+
+        .blog-content {
+            .description {
+                height: 130px;
+                @include transition(all 0.3s ease);
+            }
+
+            .title {
+                color: $primaryColor;
+                text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+            }
+        }
+    }
+}
+
+// Contact Trainer
 .contact-trainer {
     display: block;
     position: fixed;
