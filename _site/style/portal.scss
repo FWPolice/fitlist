@@ -930,6 +930,7 @@ main {
     section {
         position: relative;
         min-height: 400px;
+        padding: 4*$padding-xl 0;
 
         .back-title {
             line-height: 1;
@@ -945,7 +946,6 @@ main {
     .features {
         background: $primaryColor;
         color: white;
-        padding: 2*$padding-xl 0;
     }
 }
 
