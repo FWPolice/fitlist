@@ -93,8 +93,8 @@
     </div>
     <ul>
         <li class=""><a href="/"><i class="far fa-th-large"></i></a></li>
-        <li class=""><a href="/trainers"><i class="far fa-user-alt"></i></a></li>
-        <li class="active"><a href="/blog"><i class="far fa-comments"></i></a></li>
+        <li class=" "><a href="/trainers"><i class="far fa-user-alt"></i></a></li>
+        <li class="active "><a href="/blog"><i class="far fa-comments"></i></a></li>
     </ul>
     <div class="share-link">
         <a><i class="far fa-share-alt"></i></a>
@@ -104,23 +104,23 @@
 <nav id="mobileNav">
     <ul>
         <li class="">
-            <a href="/overview">
+            <a href="/">
                 <i class="far fa-home"></i> Home
             </a>
         </li>
         <li class="">
-            <a href="/clients">
-                <i class="far fa-users"></i> Clients
+            <a href="/trainers">
+                <i class="far fa-user-alt"></i> Trainers
             </a>
         </li>
-        <li class="">
-            <a href="/calendar">
-                <i class="far fa-calendar"></i> Calendar
+        <li class="active">
+            <a href="/blog">
+                <i class="far fa-comments"></i> Blog
             </a>
         </li>
         <li class="">
             <a href="/library">
-                <i class="far fa-video"></i> Library
+                <i class="far fa-sliders-h"></i> Settings
             </a>
         </li>
         <li class="btn-group dropup">
@@ -145,7 +145,7 @@
                 <label><i class="fal fa-search"></i></label>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-5 col-md-6">
+        <div class="col-xl-4 col-lg-5 col-md-6 hidden-xs">
             <ul>
                 <li><a href="/login"><i class="fal fa-life-ring"></i></a></li>
                 <li><a href="/settings"><i class="fal fa-sliders-h"></i></a></li>
@@ -161,10 +161,10 @@
         <div class="col-xl-9 col-lg-8 col-md-7">
             <div class="page-info">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-7">
                         <h4>Trainer Stories</h4>
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-md-6 col-5 text-right">
                         <a href="#" class="button button-red">New Post</a>
                     </div>
                 </div>
@@ -235,6 +235,10 @@
         </div>
         <div class="col-xl-3 col-lg-4 col-md-5">
             <div class="sidebar">
+    <div class="mobile-header visible-xs">
+        Filter Options
+        <a class="pull-right" data-target="toggleFilter"><i class="far fa-times"></i></a>
+    </div>
     <div class="filters">
         <h3>FILTER OPTION 1</h3>
         <ul>
@@ -281,9 +285,12 @@
 </div>
 
 <div class="contact-trainer" id="contactTrainer" style="display: none;">
+    <div class="contact-trainer" id="contactTrainer" style="display: none;">
     <div class="sidebar-contact">
-    Oh shoitza, I need to get this coded.
+        Oh shoitza, I need to get this coded.
+    </div>
 </div>
+<div class="close-contact-trainer" style="display: none" data-target="contactTrainer"></div>
 
 </div>
 

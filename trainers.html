@@ -8,12 +8,15 @@ bodyID: trainersPage
         <div class="col-xl-9 col-lg-8 col-md-7">
             <div class="page-info">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 col-9">
                         <h4>Discover Trainers</h4>
                     </div>
-                    <div class="col-md-6 text-right">
+                    <div class="col-md-6 col-4 text-right hidden-xs">
                         <a href="#" class="active"><i class="far fa-th-large"></i></a>
                         <a href="#"><i class="far fa-list"></i></a>
+                    </div>
+                    <div class="col-md-6 col-3 text-right visible-xs">
+                        <a href="#" data-target="toggleFilter"><i class="far fa-filter"></i></a>
                     </div>
                 </div>
             </div>
@@ -277,6 +280,4 @@ bodyID: trainersPage
     </div>
 </div>
 
-<div class="contact-trainer" id="contactTrainer" style="display: none;">
-    {% include _contact.html %}
-</div>
+{% include _contact.html %}

@@ -43,9 +43,14 @@ $('#chooseFile').bind('change', function () {
 $('[data-target="contactTrainer"]').click(function (e) {
     e.preventDefault();
     $('#contactTrainer').animate({width: 'toggle'});
+    $('.close-contact-trainer').fadeToggle();
 })
 
-
+// TOGGLE FILTER
+$('[data-target="toggleFilter"]').click(function (e) {
+    e.preventDefault();
+    $('.sidebar').toggle();
+})
 
 // MOBILE MENU
 $('#mobileMenuButton').click( function(e) {

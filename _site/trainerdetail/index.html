@@ -93,8 +93,8 @@
     </div>
     <ul>
         <li class=""><a href="/"><i class="far fa-th-large"></i></a></li>
-        <li class=""><a href="/trainers"><i class="far fa-user-alt"></i></a></li>
-        <li class=""><a href="/blog"><i class="far fa-comments"></i></a></li>
+        <li class=" active"><a href="/trainers"><i class="far fa-user-alt"></i></a></li>
+        <li class=" "><a href="/blog"><i class="far fa-comments"></i></a></li>
     </ul>
     <div class="share-link">
         <a><i class="far fa-share-alt"></i></a>
@@ -104,23 +104,23 @@
 <nav id="mobileNav">
     <ul>
         <li class="">
-            <a href="/overview">
+            <a href="/">
                 <i class="far fa-home"></i> Home
             </a>
         </li>
         <li class="">
-            <a href="/clients">
-                <i class="far fa-users"></i> Clients
+            <a href="/trainers">
+                <i class="far fa-user-alt"></i> Trainers
             </a>
         </li>
         <li class="">
-            <a href="/calendar">
-                <i class="far fa-calendar"></i> Calendar
+            <a href="/blog">
+                <i class="far fa-comments"></i> Blog
             </a>
         </li>
         <li class="">
             <a href="/library">
-                <i class="far fa-video"></i> Library
+                <i class="far fa-sliders-h"></i> Settings
             </a>
         </li>
         <li class="btn-group dropup">
@@ -145,7 +145,7 @@
                 <label><i class="fal fa-search"></i></label>
             </div>
         </div>
-        <div class="col-xl-4 col-lg-5 col-md-6">
+        <div class="col-xl-4 col-lg-5 col-md-6 hidden-xs">
             <ul>
                 <li><a href="/login"><i class="fal fa-life-ring"></i></a></li>
                 <li><a href="/settings"><i class="fal fa-sliders-h"></i></a></li>
@@ -190,6 +190,12 @@
                             Francis Lewis Gym
                         </li>
                         <li>
+                            <div class="label">Training Types</div>
+                            <div><i class="far fa-check"></i> One to One Training</div>
+                            <div><i class="far fa-check"></i> Two to One Training</div>
+                            <div><i class="far fa-check"></i> Group Training</div>
+                        </li>
+                        <li>
                             <div class="label">Certifications</div>
                             <span class="badge">SCSS</span> <span class="badge">Fitness</span> <span class="badge">tags</span>
                             <span class="badge">Fitness</span> <span class="badge">tags</span> <span class="badge">SCSS</span>
@@ -219,11 +225,101 @@
                 </section>
                 <section class="pricing">
                     <h4>Pricing</h4>
+                    <div class="row">
+                        <div class="col-xl-4 col-lg-6">
+                            <a class="plan plan-1" href="/signup">
+                                <div class="plan-cover">
+                                    <div class="plan-name">Startup</div>
+                                    <div class="plan-summary">Up to 3 clients</div>
+                                    <div class="plan-price">
+                                        <h1>
+                                            <sup>$</sup>29
+                                            <small>/ MONTH</small>
+                                        </h1>
+                                    </div>
+                                </div>
+
+                                <div class="plan-action">
+                                    <span>Get Started Free</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <a class="plan plan-2" href="/signup">
+                                <div class="plan-cover">
+                                    <div class="plan-name">Startup</div>
+                                    <div class="plan-summary">Up to 3 clients</div>
+                                    <div class="plan-price">
+                                        <h1>
+                                            <sup>$</sup>29
+                                            <small>/ MONTH</small>
+                                        </h1>
+                                    </div>
+                                </div>
+
+                                <div class="plan-action">
+                                    <span>Get Started Free</span>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xl-4 col-lg-6">
+                            <a class="plan plan-3" href="/signup">
+                                <div class="plan-cover">
+                                    <div class="plan-name">Startup</div>
+                                    <div class="plan-summary">Up to 3 clients</div>
+                                    <div class="plan-price">
+                                        <h1>
+                                            <sup>$</sup>29
+                                            <small>/ MONTH</small>
+                                        </h1>
+                                    </div>
+                                </div>
+
+                                <div class="plan-action">
+                                    <span>Get Started Free</span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
                 </section>
+
+                <section>
+                    <h4>Gallery</h4>
+                    <ul class="gallery">
+                        <li>
+                            <a href="#"><img src="https://images.unsplash.com/photo-1488190211105-8b0e65b80b4e?w=500&h=500&fit=crop" alt="#">
+                        </li>
+                        <li>
+                            <a href="#"><img src="https://images.unsplash.com/photo-1515260268569-9271009adfdb?w=500&h=500&fit=crop" alt="#">
+                        </li>
+                        <li>
+                            <a href="#"><img src="https://images.unsplash.com/photo-1506045412240-22980140a405?w=500&h=500&fit=crop" alt="#">
+                        </li>
+                        <li>
+                            <a href="#"><img src="https://images.unsplash.com/photo-1514041181368-bca62cceffcd?w=500&h=500&fit=crop" alt="#">
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="social" class="share mt-5">
+                    <div class="container">
+                        <div class="share-message">Make This Trainer Famous</div>
+                        <div class="addthis_inline_share_toolbox_8jbg"></div>
+                    </div>
+                </section>
+                <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f14e4fb6ef9007a"></script>
             </div>
         </div>
     </div>
 </div>
+
+<div class="contact-trainer" id="contactTrainer" style="display: none;">
+    <div class="sidebar-contact">
+        Oh shoitza, I need to get this coded.
+    </div>
+</div>
+<div class="close-contact-trainer" style="display: none" data-target="contactTrainer"></div>
+
 
 
             <div class="container">

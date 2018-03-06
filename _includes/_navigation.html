@@ -8,8 +8,8 @@
     </div>
     <ul>
         <li class="{% if current[1] == 'index' %}active{% endif %}"><a href="{{ site.baseurl }}/"><i class="far fa-th-large"></i></a></li>
-        <li class="{% if current[1] == 'trainers' %}active{% endif %}"><a href="{{ site.baseurl }}/trainers"><i class="far fa-user-alt"></i></a></li>
-        <li class="{% if current[1] == 'blog' %}active{% endif %}"><a href="{{ site.baseurl }}/blog"><i class="far fa-comments"></i></a></li>
+        <li class="{% if current[1] == 'trainers' %}active{% endif %} {% if current[1] == 'trainerdetail' %}active{% endif %}"><a href="{{ site.baseurl }}/trainers"><i class="far fa-user-alt"></i></a></li>
+        <li class="{% if current[1] == 'blog' %}active{% endif %} {% if current[1] == 'blog-single' %}active{% endif %}"><a href="{{ site.baseurl }}/blog"><i class="far fa-comments"></i></a></li>
     </ul>
     <div class="share-link">
         <a><i class="far fa-share-alt"></i></a>
@@ -19,23 +19,23 @@
 <nav id="mobileNav">
     <ul>
         <li class="{% if current[1] == 'overview' %}active{% endif %}">
-            <a href="{{ site.baseurl }}/overview">
+            <a href="{{ site.baseurl }}/">
                 <i class="far fa-home"></i> Home
             </a>
         </li>
-        <li class="{% if current[1] == 'clients' %}active{% endif %}">
-            <a href="{{ site.baseurl }}/clients">
-                <i class="far fa-users"></i> Clients
+        <li class="{% if current[1] == 'trainers' %}active{% endif %}">
+            <a href="{{ site.baseurl }}/trainers">
+                <i class="far fa-user-alt"></i> Trainers
             </a>
         </li>
-        <li class="{% if current[1] == 'routines' %}active{% endif %}">
-            <a href="{{ site.baseurl }}/calendar">
-                <i class="far fa-calendar"></i> Calendar
+        <li class="{% if current[1] == 'blog' %}active{% endif %}">
+            <a href="{{ site.baseurl }}/blog">
+                <i class="far fa-comments"></i> Blog
             </a>
         </li>
         <li class="{% if current[1] == 'library' %}active{% endif %}">
             <a href="{{ site.baseurl }}/library">
-                <i class="far fa-video"></i> Library
+                <i class="far fa-sliders-h"></i> Settings
             </a>
         </li>
         <li class="btn-group dropup">
