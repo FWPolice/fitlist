@@ -551,108 +551,6 @@ main {
             }
         }
     }
-
-    .trainer {
-        display: block;
-        position: relative;
-        background: white;
-        margin: $padding 0;
-        padding: $padding-lg;
-        @include border-radius(6px);
-        @include box-shadow($boxShadow);
-        @include transition(all .2s linear);
-
-        .trainer-photo {
-            figure {
-                margin: 0;
-                padding: 0;
-                width: 100px;
-                margin: 0 auto;
-                overflow: hidden;
-                border: none;
-                @include border-radius(50%);
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-        }
-
-        .trainer-info {
-            padding: $padding 0 0;
-
-            h2, h3 {
-                margin: 0;
-                text-align: center;
-            }
-
-            h2 {
-                font-size: $fontSizeMedium;
-            }
-
-            h3 {
-                font-size: $fontSize;
-                color: $textColorLight;
-            }
-        }
-
-        .trainer-type {
-            display: block;
-            position: absolute;
-            width: $inputSizeMd;
-            height: $inputSizeMd;
-            line-height: $inputSizeMd - 1px;
-            background: white;
-            color: $primaryColor;
-            text-align: center;
-            left: -(.25*$inputSizeMd);
-            top: -(.25*$inputSizeMd);
-            font-size: 22px;
-            @include border-radius(.5*$inputSizeMd);
-            @include transform(scale(.85));
-            @include box-shadow($boxShadowHover);
-            @include transition(all .2s linear);
-
-            img {
-                width: 26px;
-            }
-        }
-
-        .trainer-description {
-            color: $textColor;
-            padding: $padding 0 0;
-        }
-
-        .trainer-actions {
-            color: $textColor;
-            padding: $padding 0 0;
-            @extend %clearfix;
-
-            a.button {
-                float: left;
-                display: block;
-                width: 48%;
-                text-align: center;
-
-                &:last-child {
-                    margin-left: 4%;
-                }
-            }
-        }
-
-        &:hover {
-            border-color: $borderColor;
-            @include box-shadow($boxShadowHover);
-            @include transition(all .2s linear);
-
-            .trainer-type {
-                background: $yellowAlert;
-                @include transform(scale(1));
-                @include transition(all .2s linear);
-            }
-        }
-    }
 }
 
 // Header
@@ -926,6 +824,328 @@ main {
                 color: white;
                 @include box-shadow($boxShadowHover);
             }
+        }
+    }
+}
+
+// Trainer List
+.trainer {
+    display: block;
+    position: relative;
+    background: white;
+    margin: $padding 0;
+    padding: $padding-lg;
+    @include border-radius(6px);
+    @include box-shadow($boxShadow);
+    @include transition(all .2s linear);
+
+    .trainer-photo {
+        figure {
+            margin: 0;
+            padding: 0;
+            width: 100px;
+            margin: 0 auto;
+            overflow: hidden;
+            border: none;
+            @include border-radius(50%);
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+    }
+
+    .trainer-info {
+        padding: $padding 0 0;
+
+        h2, h3 {
+            margin: 0;
+            text-align: center;
+        }
+
+        h2 {
+            font-size: $fontSizeMedium;
+        }
+
+        h3 {
+            font-size: $fontSize;
+            color: $textColorLight;
+        }
+    }
+
+    .trainer-type {
+        display: block;
+        position: absolute;
+        width: $inputSizeMd;
+        height: $inputSizeMd;
+        line-height: $inputSizeMd - 1px;
+        background: white;
+        color: $primaryColor;
+        text-align: center;
+        left: -(.25*$inputSizeMd);
+        top: -(.25*$inputSizeMd);
+        font-size: 22px;
+        @include border-radius(.5*$inputSizeMd);
+        @include transform(scale(.85));
+        @include box-shadow($boxShadowHover);
+        @include transition(all .2s linear);
+
+        img {
+            width: 26px;
+        }
+    }
+
+    .trainer-description {
+        color: $textColor;
+        padding: $padding 0 0;
+
+        ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+
+            li {
+                display: block;
+                position: relative;
+                color: $textColorLight;
+                padding: 3px 0;
+                border-bottom: 1px dotted $borderColorLight;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                font-size: $fontSizeSmall;
+
+                i {
+                    display: inline-block;
+                    width: $inputSizeSm;
+                    text-align: center;
+                }
+
+                &:last-child {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    .trainer-actions {
+        color: $textColor;
+        padding: $padding 0 0;
+        @extend %clearfix;
+
+        a.button {
+            float: left;
+            display: block;
+            width: 48%;
+            text-align: center;
+
+            &:last-child {
+                margin-left: 4%;
+            }
+
+            &.display-block {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+
+    &:hover {
+        border-color: $borderColor;
+        @include box-shadow($boxShadowHover);
+        @include transition(all .2s linear);
+
+        .trainer-type {
+            background: $yellowAlert;
+            @include transform(scale(1));
+            @include transition(all .2s linear);
+        }
+
+        .trainer-description {
+            ul li {
+                color: $textColor;
+
+                i {
+                    color: $primaryColor;
+                }
+            }
+        }
+    }
+}
+
+// Trainer Detail
+.trainer-detail {
+    .trainer-sidebar {
+        display: block;
+        position: relative;
+        background: white;
+        padding: $padding-lg;
+        @include border-radius(4px);
+        @include box-shadow($boxShadowHover);
+        @include transition(all .2s linear);
+
+        .trainer-photo {
+            padding-bottom: $padding-xl;
+
+            figure {
+                margin: 0;
+                padding: 0;
+                width: 100px;
+                margin: 0 auto;
+                overflow: hidden;
+                border: none;
+                @include border-radius(50%);
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+
+        .trainer-info {
+            padding: $padding 0;
+            position: relative;
+            background: $bodyColor;
+            margin-left: -$padding-lg;
+            margin-right: -$padding-lg;
+
+            h2, h3 {
+                margin: 0;
+                text-align: center;
+            }
+
+            h2 {
+                font-size: $fontSizeLarge;
+            }
+
+            h3 {
+                font-size: $fontSizeMedium;
+                color: $textColorLight;
+            }
+        }
+
+        .trainer-type {
+            display: block;
+            position: absolute;
+            width: $inputSizeMd;
+            height: $inputSizeMd;
+            line-height: $inputSizeMd - 1px;
+            background: white;
+            color: $primaryColor;
+            text-align: center;
+            left: -(.25*$inputSizeMd);
+            top: -(.25*$inputSizeMd);
+            font-size: 22px;
+            @include border-radius(.5*$inputSizeMd);
+            @include transform(scale(.85));
+            @include box-shadow($boxShadowHover);
+            @include transition(all .2s linear);
+
+            img {
+                width: 26px;
+            }
+        }
+
+        .trainer-list {
+            color: $textColor;
+            padding: $padding 0 0;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                list-style-type: none;
+
+                li {
+                    display: block;
+                    position: relative;
+                    color: $textColor;
+                    padding: $padding-sm 0;
+                    border-bottom: 1px dotted $borderColor;
+                    font-size: $fontSize;
+                    line-height: 1.6;
+
+                    i {
+                        display: inline-block;
+                        width: $inputSizeSm;
+                        text-align: center;
+                    }
+
+                    &:last-child {
+                        border: none;
+                    }
+
+                    .pull-right {
+                        float: right;
+                    }
+
+                    .badge {
+                        border: 1px solid $primaryColor;
+                        color: $textColor;
+                        margin-top: $padding-xs;
+                        line-height: $inputSizeSm - 1px;
+                        height: $inputSizeSm;
+                    }
+
+                    .label {
+                        display: block;
+                        font-size: $fontSizeSmall;
+                        color: $textColorLight;
+                        text-transform: uppercase;
+                    }
+
+                    ul.social-icons {
+                        margin: 0;
+                        padding: 0;
+
+                        li {
+                            display: inline-block;
+                            float: none;
+                            margin-left: $padding-xs;
+                            border: none;
+
+                            &:first-child {
+                                margin: 0;
+                            }
+
+                            a {
+                                display: block;
+                                width: $inputSize;
+                                height: $inputSize;
+                                line-height: $inputSize - 1px;
+                                border: 1px solid $borderColor;
+                                text-align: center;
+                                @include border-radius(3px);
+
+                                &:hover {
+                                    border-color: $blueAlert;
+                                    background: $blueAlert;
+                                    color: white;
+                                    @include box-shadow($boxShadowHover);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .trainer-type {
+                background: $yellowAlert;
+                @include transform(scale(1));
+                @include transition(all .2s linear);
+            }
+        }
+    }
+
+    .trainer-content {
+        padding: 0 $padding-xl;
+
+        section {
+            padding: 0;
+            margin-bottom: $padding-xl;
         }
     }
 }
@@ -1232,7 +1452,7 @@ main {
     }
 }
 
-.blog-share {
+.blog-share, .share {
 	padding: 0;
 
 	.container {
@@ -1241,7 +1461,8 @@ main {
 		background: white;
 		padding: 2*$padding-xl $padding-xl $padding-xl;
 		border: 5px solid $primaryColor;
-		@include box-shadow($boxShadow);
+        background: white;
+		@include box-shadow($boxShadowHover);
 
 		.share-message {
 			background: $primaryColor;
@@ -1299,195 +1520,189 @@ main {
 /** Login Page **/
 #loginPage {
     position: relative;
+    background: white;
 
     &:before {
         content: " ";
         position: absolute;
-        left: 0;
+        left: $sidebarSize;
+        right: 0;
         top: 0;
-        width: 100%;
-        height: 60vh;
-        background: url('../images/hero/hero.png') no-repeat center center;
+        height: 100vh;
+        background: url('../images/hero/breathe.jpeg') no-repeat center right;
         background-size: cover;
     }
 
-    .login-outer-container {
-        display: table;
-        width: 100%;
+    .login {
+        position: fixed;
+        width: $sidebarSize;
         height: 100vh;
-        table-layout: fixed;
+        left: 0;
+        top: 0;
+        background: white;
+        overflow: hidden;
+        z-index: 3;
+        @include box-shadow(10px 0 35px 0 rgba(50,50,93,0.27));
 
-        .login-inner-container {
-            display: table-cell;
+        .logo {
+            margin-bottom: 3*$padding-lg;
+            text-transform: uppercase;
+            font-size: 16px;
+            //@include opacity(.8);
+
+            img {
+                height: $logoSize;
+                max-width: 100%;
+            }
+        }
+
+        .login-container {
+            position: relative;
+            height: 100vh;
+        }
+
+        .login-form {
+            display: block;
+            padding: 3*$padding-xl 2*$padding-lg;
+            @include vertical-align(relative);
+
+            &.small-gutter {
+                padding: 1.5*$padding-xl 2*$padding-lg;
+            }
+
+            h5 {
+                margin-top: $padding;
+                font-size: $fontSize;
+            }
+
+            .form-group {
+                padding: 0;
+                margin-bottom: $padding;
+                position: relative;
+                display: block;
+
+                label {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: $inputSizeMd;
+                    height: $inputSizeMd;
+                    line-height: $inputSizeMd;
+                    text-align: center;
+                    border-right: 1px solid $borderColor;
+                    color: $textColorLight;
+                    @include transition(all .1s ease);
+                }
+
+                input {
+                    width: 100%;
+                    border: 1px solid $borderColor;
+                    height: $inputSizeMd;
+                    line-height: $inputSizeMd;
+                    padding: 0 $padding 0 ($inputSizeMd + $padding);
+                    color: $textColor;
+                    @include transition(all .1s ease);
+
+                    &:focus {
+                        outline: none;
+                        border-color: $textColor;
+                        @include box-shadow(none);
+                        @include transition(all .1s ease);
+
+                        ~ label {
+                            border-color: $textColor;
+                            color: $textColorDark;
+                            @include transition(all .1s ease);
+                        }
+                    }
+                }
+
+                .select-box {
+                    font-size: $fontSize;
+                    position: relative;
+                    height: $inputSizeMd;
+                    line-height: $inputSizeMd;
+                    border: 1px solid $borderColor;
+
+                    select {
+                        -webkit-appearance:none;
+                        -moz-appearance:none;
+                        appearance:none;
+                        padding-right: 40px;
+                        padding-left: ($inputSizeMd + $padding);
+                        border: none;
+                        background: transparent;
+                        color: $textColor;
+
+                        option {
+                            &:disabled {
+                                color: $textColorLight;
+                            }
+                        }
+                    }
+
+                    &:after {
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        content: '\21F5';
+                        pointer-events: none;
+                        padding: 0 $padding;
+                        color: $textColorLight;
+                        height: $inputSizeMd;
+                        line-height: $inputSize;
+                    }
+                }
+            }
+
+            .login-button {
+                margin-top: $padding-lg;
+
+                .forgot-password {
+                    display: inline-block;
+                    font-weight: $fontNormal;
+                    color: $textColorLight;
+                    padding: $padding-sm 0;
+
+                    &:hover {
+                        color: $primaryColor;
+                    }
+                }
+            }
+
+            .login-facebook {
+                text-align: center;
+                margin-top: $padding-xl;
+            }
+        }
+
+        .login-info {
+            position: absolute;
             width: 100%;
             height: 100%;
-            vertical-align: middle;
-            float: none;
+            padding: 2*$padding-xl;
+            background: $secondaryColor;
+            background: url('../images/hero/workout-female.png') no-repeat center center;
+            background-size: cover;
 
-            .login {
-                width: 94%;
-                max-width: 1000px;
-                background: white;
-                margin: $padding auto;
-                overflow: hidden;
-                @include border-radius(4px);
-                @include box-shadow(0 10px 56px 3px rgba(0,0,0,0.1));
-
-                .logo {
-                    margin-bottom: 3*$padding-lg;
-                    text-transform: uppercase;
-                    font-size: 16px;
-                    //@include opacity(.8);
-
-                    img {
-                        height: $logoSize;
-                        max-width: 100%;
-                    }
-                }
-
-                .login-form {
-                    display: block;
-                    padding: 3*$padding-xl 2*$padding-lg;
-
-                    &.small-gutter {
-                        padding: 1.5*$padding-xl 2*$padding-lg;
-                    }
-
-                    h5 {
-                        margin-top: $padding;
-                        font-size: $fontSize;
-                    }
-
-                    .form-group {
-                        padding: 0;
-                        margin-bottom: $padding;
-                        position: relative;
-                        display: block;
-
-                        label {
-                            position: absolute;
-                            left: 0;
-                            top: 0;
-                            width: $inputSizeMd;
-                            height: $inputSizeMd;
-                            line-height: $inputSizeMd;
-                            text-align: center;
-                            border-right: 1px solid $borderColor;
-                            color: $textColorLight;
-                            @include transition(all .1s ease);
-                        }
-
-                        input {
-                            width: 100%;
-                            border: 1px solid $borderColor;
-                            height: $inputSizeMd;
-                            line-height: $inputSizeMd;
-                            padding: 0 $padding 0 ($inputSizeMd + $padding);
-                            color: $textColor;
-                            @include transition(all .1s ease);
-
-                            &:focus {
-                                outline: none;
-                                border-color: $textColor;
-                                @include box-shadow(none);
-                                @include transition(all .1s ease);
-
-                                ~ label {
-                                    border-color: $textColor;
-                                    color: $textColorDark;
-                                    @include transition(all .1s ease);
-                                }
-                            }
-                        }
-
-                        .select-box {
-                            font-size: $fontSize;
-                            position: relative;
-                            height: $inputSizeMd;
-                            line-height: $inputSizeMd;
-                            border: 1px solid $borderColor;
-
-                            select {
-                                -webkit-appearance:none;
-                                -moz-appearance:none;
-                                appearance:none;
-                                padding-right: 40px;
-                                padding-left: ($inputSizeMd + $padding);
-                                border: none;
-                                background: transparent;
-                                color: $textColor;
-
-                                option {
-                                    &:disabled {
-                                        color: $textColorLight;
-                                    }
-                                }
-                            }
-
-                            &:after {
-                                position: absolute;
-                                right: 0;
-                                top: 0;
-                                content: '\21F5';
-                                pointer-events: none;
-                                padding: 0 $padding;
-                                color: $textColorLight;
-                                height: $inputSizeMd;
-                                line-height: $inputSize;
-                            }
-                        }
-                    }
-
-                    .login-button {
-                        margin-top: $padding-lg;
-
-                        .forgot-password {
-                            display: inline-block;
-                            font-weight: $fontNormal;
-                            color: $textColorLight;
-                            padding: $padding-sm 0;
-
-                            &:hover {
-                                color: $primaryColor;
-                            }
-                        }
-                    }
-
-                    .login-facebook {
-                        text-align: center;
-                        margin-top: $padding-xl;
-                    }
-                }
-
-                .login-info {
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    padding: 2*$padding-xl;
-                    background: $secondaryColor;
-                    background: url('../images/hero/workout-female.png') no-repeat center center;
-                    background-size: cover;
-
-                    .register-info {
-                        display: block;
-                        text-align: center;
-                        padding: $padding;
-                        background: rgba(255,255,255,0.85);
-                        @include box-shadow(0 1px 10px rgba(0,0,0,0.1));
-                    }
-                }
+            .register-info {
+                display: block;
+                text-align: center;
+                padding: $padding;
+                background: rgba(255,255,255,0.85);
+                @include box-shadow(0 1px 10px rgba(0,0,0,0.1));
+            }
+        }
 
 
 
-                @media screen and (max-width: $grid-md){
-                    .login-form {
-                        padding: $padding-xl;
-                    }
+        @media screen and (max-width: $grid-md){
+            .login-form {
+                padding: $padding-xl;
+            }
 
-                    .logo {
-                        margin-bottom: $padding-xl;
-                    }
-                }
+            .logo {
+                margin-bottom: $padding-xl;
             }
         }
     }
