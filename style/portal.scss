@@ -22,9 +22,13 @@
 
 /** Generic **/
 body {
-  background: $bodyColor;
-  letter-spacing: 0.0125em;
-  padding-left: $navSize;
+    background: $bodyColor;
+    letter-spacing: 0.0125em;
+    padding-left: $navSize;
+
+    &.bodyoverflow {
+        overflow: hidden;
+    }
 }
 
 .loading {
@@ -556,6 +560,17 @@ main {
             }
         }
     }
+}
+
+.box {
+    display: block;
+    position: relative;
+    background: white;
+    padding: $padding-lg;
+    margin-bottom: 1.5*$padding-xl;
+    @include border-radius(4px);
+    @include box-shadow($boxShadowHover);
+    @include transition(all .2s linear);
 }
 
 // Header
@@ -1728,6 +1743,11 @@ main {
     @include transition(all .1s ease);
 }
 
+// Settings Page
+.settings-content {
+    padding: 0 $padding-xl;
+}
+
 /** Login Page **/
 #loginPage {
     position: relative;
@@ -2241,7 +2261,7 @@ footer {
     }
 
     main {
-        padding: $padding-xl $padding;
+        padding: $padding-xl 0;
 
         &#trainersPage {
             padding-left: 0;
@@ -2282,8 +2302,34 @@ footer {
     }
 
     .contact-trainer {
-        width: 100%;
+        display: none;
+        position: fixed;
+        top: $padding;
+        bottom: $inputSizeLg + $padding;
+        left: $padding;
+        right: $padding;
+        height: auto;
+        width: auto;
+        padding: $padding $padding-lg;
+        background: white;
+        z-index: 7;
+        overflow: auto;
+        @include box-shadow($boxShadowHover);
 
+        .mobile-header {
+            font-size: $fontMedium;
+            font-weight: $fontBold;
+            text-transform: uppercase;
+
+            .pull-right {
+                float: right;
+            }
+        }
+    }
+
+    .close-contact-trainer {
+        display: none !important;
+        opacity: 0;
     }
 }
 

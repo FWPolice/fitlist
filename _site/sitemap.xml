@@ -16,6 +16,9 @@
 <loc>http://localhost:4000/login/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/settings/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/trainerdetail/</loc>
 </url>
 <url>

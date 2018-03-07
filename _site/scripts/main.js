@@ -44,12 +44,14 @@ $('[data-target="contactTrainer"]').click(function (e) {
     e.preventDefault();
     $('#contactTrainer').animate({width: 'toggle'});
     $('.close-contact-trainer').fadeToggle();
+    $('body').toggleClass('bodyoverflow');
 })
 
 // TOGGLE FILTER
 $('[data-target="toggleFilter"]').click(function (e) {
     e.preventDefault();
     $('.sidebar').toggle();
+    $('body').toggleClass('bodyoverflow');
 })
 
 // MOBILE MENU
