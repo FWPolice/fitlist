@@ -160,23 +160,82 @@
     <div class="row">
         <div class="col-xl-3 col-lg-4">
             <div class="box">
-                Settings section nav?
+                <ul class="link-list">
+                    <li class="active"><a href="#"><i class="far fa-user"></i>Manage Profile</a></li>
+                    <li><a href="#"><i class="far fa-lock"></i>Update Password</a></li>
+                    <li><a href="#"><i class="far fa-comment"></i>Notification Settings</a></li>
+                </ul>
             </div>
         </div>
         <div class="col-xl-9 col-lg-8">
             <div class="settings-content">
                 <div class="page-info">
-                    <div class="row">
-                        <div class="col-md-6 col-7">
-                            <h4>Account Settings</h4>
-                        </div>
-                        <div class="col-md-6 col-5 text-right">
-
-                        </div>
-                    </div>
+                    <h4>Account Settings</h4>
                 </div>
 
-                asdf
+                <form novalidate="novalidate" class="simple_form new_profile" id="new_profile" enctype="multipart/form-data" action="/users/1/profiles" accept-charset="UTF-8" method="post"><input name="utf8" type="hidden" value="✓"><input type="hidden" name="authenticity_token" value="IFSa9DDwVSJtWmP6BimfHQkgGWj5ZryDtN5YVmg/CjW2TcEKh1LOpt5B0Qz/c26DtiJhr0+EDMHfCAHj3y560Q==">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="form-group string required profile_first_name"><label class="control-label string required" for="profile_first_name"><abbr title="required">*</abbr> First name</label><input class="form-control string required" type="text" name="profile[first_name]" id="profile_first_name"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group string required profile_last_name"><label class="control-label string required" for="profile_last_name"><abbr title="required">*</abbr> Last name</label><input class="form-control string required" type="text" name="profile[last_name]" id="profile_last_name"></div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group file required profile_avatar"><label class="control-label file required" for="profile_avatar"><abbr title="required">*</abbr> Avatar</label><input class="file required" type="file" name="profile[avatar]" id="profile_avatar"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group string required profile_state"><label class="control-label string required" for="profile_state"><abbr title="required">*</abbr> State</label><input class="form-control string required" type="text" name="profile[state]" id="profile_state"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group string required profile_city"><label class="control-label string required" for="profile_city"><abbr title="required">*</abbr> City</label><input class="form-control string required" type="text" name="profile[city]" id="profile_city"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group integer required profile_solo_pricing"><label class="control-label integer required" for="profile_solo_pricing"><abbr title="required">*</abbr> Solo pricing</label><input class="form-control numeric integer required" type="number" step="1" name="profile[solo_pricing]" id="profile_solo_pricing"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group integer required profile_duo_pricing"><label class="control-label integer required" for="profile_duo_pricing"><abbr title="required">*</abbr> Duo pricing</label><input class="form-control numeric integer required" type="number" step="1" name="profile[duo_pricing]" id="profile_duo_pricing"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group integer required profile_group_pricing"><label class="control-label integer required" for="profile_group_pricing"><abbr title="required">*</abbr> Group pricing</label><input class="form-control numeric integer required" type="number" step="1" name="profile[group_pricing]" id="profile_group_pricing"></div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="form-group string required profile_training_location"><label class="control-label string required" for="profile_training_location"><abbr title="required">*</abbr> Training location</label><input class="form-control string required" type="text" name="profile[training_location]" id="profile_training_location"></div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="text required" for="profile_specialties"><abbr title="required">*</abbr> Specialties</label>
+                                <textarea name="profile[specialties]" id="profile_specialties"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="string optional" for="profile_Certifications">Certifications</label>
+                                <textarea name="profile[certifications]" id="profile_certifications"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group">
+                                <label class="string optional" for="profile_About">About</label>
+                                <textarea name="profile[about]" id="profile_about"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="form-group boolean optional profile_travels">
+                                <div class="checkbox">
+                                    <input class="boolean optional" type="checkbox" value="1" name="profile[travels]" id="profile_travels">
+
+                                    <label class="boolean optional" for="profile_travels">
+                                        I travel to my client
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <input type="submit" name="commit" value="Save Profile" class="button button-lg" data-disable-with="Save Profile">
+                        </div>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
