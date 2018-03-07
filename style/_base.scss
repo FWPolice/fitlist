@@ -293,6 +293,16 @@ pre {
         }
     }
 
+    &.button-white {
+        background: white;
+        color: $primaryColor;
+
+        &:hover {
+            background: $blueAlert;
+            color: white;
+        }
+    }
+
     &.button-blue {
         background: $secondaryColor;
         color: white;
