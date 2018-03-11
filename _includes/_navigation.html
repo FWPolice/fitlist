@@ -18,7 +18,7 @@
 
 <nav id="mobileNav">
     <ul>
-        <li class="{% if current[1] == 'overview' %}active{% endif %}">
+        <li class="{% if current[1] == 'index' %}active{% endif %}">
             <a href="{{ site.baseurl }}/">
                 <i class="far fa-home"></i> Home
             </a>
@@ -38,7 +38,12 @@
                 <i class="far fa-sliders-h"></i> Settings
             </a>
         </li>
-        <li class="btn-group dropup">
+        <li class="">
+            <a href="{{ site.baseurl }}/login">
+                <i class="far fa-user-circle"></i> Login
+            </a>
+        </li>
+        <!--<li class="btn-group dropup">
             <a href="javascript:;" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 <i class="far fa-ellipsis-v"></i> More
             </a>
@@ -48,6 +53,6 @@
                 <li class="{% if current[1] == 'account/settings' %}active{% endif %}"><a href="/account/profile/edit" class="animsition-link dropdown-item"><i class="far fa-cog"></i> Settings</a></li>
                 <li class="{% if current[1] == 'login' %}active{% endif %}"><a href="/" class="animsition-link dropdown-item"><i class="far fa-sign-out"></i> Sign Out</a></li>
             </ul>
-        </li>
+        </li>-->
     </ul>
 </nav>

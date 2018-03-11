@@ -245,7 +245,7 @@ nav {
         z-index: 99;
         height: $inputSizeLg;
         background: white;
-        @include box-shadow($boxShadow);
+        @include box-shadow(0 -2px 15px 0 rgba(0,0,0,0.17));
 
         ul {
             list-style-type: none;
@@ -663,6 +663,7 @@ main {
 
             .button {
                 font-size: $fontSizeLarge;
+                margin: $padding-xs $padding-sm;
                 @include box-shadow(0 15px 25px 0 rgba(0,0,0,.2));
             }
 
@@ -2365,6 +2366,38 @@ footer {
         }
     }
 
+    #loginPage {
+        padding: 0;
+        height: 100vh;
+        &:before {
+            left: 0;
+            width: 100%;
+            background-position: center center;
+        }
+
+        .page-container {
+            height: 100vh;
+        }
+
+        .login {
+            background: rgba(255,255,255,0.99);
+            width: 100%;
+            height: auto;
+            padding: $padding;
+            @include vertical-align(relative);
+            @include box-shadow($boxShadowHover);
+
+            .login-container {
+                height: auto;
+
+                .login-form {
+                    top: 0;
+                    @include transform(translateY(0));
+                }
+            }
+        }
+    }
+
     main {
         padding: $padding-xl 0;
 
@@ -2377,7 +2410,7 @@ footer {
             padding-top: 0;
 
             .share {
-                padding: 0;
+                padding: 0 $padding;
             }
         }
 
