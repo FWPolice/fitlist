@@ -1504,6 +1504,7 @@ main {
         right: $padding-xl;
         top:  4*$padding-xl;
         font-size: 22px;
+        z-index: 6;
         @include border-radius(.5*$inputSizeLg);
         @include transform(scale(.85));
         @include box-shadow($boxShadowHover);
