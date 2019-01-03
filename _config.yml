@@ -4,8 +4,8 @@ title:               ThunderFIT
 tagline:             Fitness Made Simple
 author:              BeeBack, LLC.
 author_email:        sazzad@beeback.io
-url:                 https://iamshipon1988.github.io/thunderfitapp/
-baseurl:             'https://iamshipon1988.github.io/tfdirectory/'
+url:                 https://fwpolice.github.io/fitlist/
+baseurl:             'https://fwpolice.github.io/fitlist/'
 permalink:           pretty
 exclude:             [README.markdown]
 analytics_id:        "UA-104952515-1"
